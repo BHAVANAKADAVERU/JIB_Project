@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services - JIB Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+   <a href="index.html" class="logo">
+    <img src="image.png" width="32" height="32" alt="Logo" class="logo-img">
+    JIB
+   </a>
+</header>
+
+<div class="page-container">
+    <h1>Our Services</h1>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get("type");
+
+        let title = {
+            import: "Import Services",
+            export: "Export Services",
+            consulting: "Business Consulting",
+            logistics: "Logistics Support",
+            portfolio: "Portfolio Management"
+        };
+
+        let content = {
+            import: "We help businesses import top-quality products globally with full logistics support.",
+            export: "We enable sellers to export products globally with safe, reliable processes.",
+            consulting: "Expert business guidance for entering the ecommerce and global trade market.",
+            logistics: "Fast, smooth warehousing and delivery support with tracking.",
+            portfolio: "We help sellers manage and grow their online product portfolios."
+        };
+
+        document.write(`<h2>${title[type] || "All Services"}</h2>`);
+        document.write(`<p>${content[type] || "Explore our complete ecommerce solutions."}</p>`);
+    </script>
+
+</div>
+
+
+</body>
+</html>
